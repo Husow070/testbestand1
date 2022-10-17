@@ -2,9 +2,14 @@
 
 abstract class abstractWinkelwagen
 {
-    protected $store;
-    protected $maxProduct;
+    private $store;
+    private $maxProduct;
 
+//    function __construct(string $store, int $maxProduct)
+//    {
+//        $this->store;
+//        $this->maxproduct;
+//    }
 
     /**
      * @return mixed
