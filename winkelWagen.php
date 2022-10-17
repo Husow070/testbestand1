@@ -8,7 +8,8 @@ class winkelWagen extends abstractWinkelwagen
 
     public function __construct(string $store, int $maxProduct, string $color)
     {
-        parent::__construct($store, $maxProduct);
+        $this->store = $store;
+        $this->maxProduct = $maxProduct;
         $this->color = $color;
         $this->drinks = [];
         $this->food =[];
@@ -27,7 +28,7 @@ class winkelWagen extends abstractWinkelwagen
      */
     public function setDrinks(Drink $drinks): bool
     {
-        $this->drinks = $drinks;
+        $this->drinks[] = $drinks;
         return true;
     }
 
@@ -36,11 +37,18 @@ class winkelWagen extends abstractWinkelwagen
      */
     public function setFood(Food $food): bool
     {
-        $this->food = $food;
+        $this->food[] = $food;
         return true;
     }
     public  function printProduct(){
-        echo $this->food;
+
+        foreach ($this->drinks as $drink){
+            echo $drink->getName();
+        }
+        echo "<br>";
+        foreach ($this->food as $food) {
+            echo $food->getName ();
+        }
     }
 
     public function getNumberOfProducts(){

@@ -1,6 +1,6 @@
 <?php
 
-class Drink extends winkelWagen
+class Drink
 {
     private $nameDrink;
     private $cataGory;
@@ -18,7 +18,7 @@ class Drink extends winkelWagen
     /**
      * @return mixed
      */
-    public function getNameDrink()
+    public function getName()
     {
         return $this->nameDrink;
     }

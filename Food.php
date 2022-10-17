@@ -1,14 +1,14 @@
 <?php
 
-class Food extends winkelWagen
+class Food
 {
-    private $nameFood;
+    private $name;
     private $catagory;
     private $price;
 
-    public function __construct(string $nameFood, int $catagory, string $price)
+    public function __construct(string $name, string $catagory, float $price)
     {
-        $this->name = $nameFood;
+        $this->name = $name;
         $this->catagory = $catagory;
         $this->price = $price;
     }
@@ -16,13 +16,13 @@ class Food extends winkelWagen
     /**
      * @return string
      */
-    public function getNameFood()
+    public function getName()
     {
-        return $this->nameFood;
+        return $this->name;
     }
 
     /**
-     * @return string
+     * @return float
      */
     public function getPrice()
     {
@@ -30,7 +30,7 @@ class Food extends winkelWagen
     }
 
     /**
-     * @return int
+     * @return string
      */
     public function getCatagory()
     {
