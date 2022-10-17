@@ -1,48 +1,49 @@
 <?php
 
-class Drink extends winkelWagen
+class Drink
 {
-    private $nameDrink;
-    private $cataGory;
-    private $age;
-    private $price;
+private $name;
+private $catagory;
+private $age;
+private $price;
 
-    public function __construct(string $nameDrink, string $cataGory, int $age , int $price)
+public function __construct(string $name, string $catagory, int $age, int $price)
+{
+    $this->name=$name;
+    $this->catagory = $catagory;
+    $this->age = $age;
+    $this->price = $price;
+
+}
+
+    /**
+     * @return string
+     */
+    public function getName(): string
     {
-        $this->nameDrink= $nameDrink;
-        $this->cataGory=$cataGory;
-        $this->age=$age;
-        $this->price=$price;
+        return $this->name;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getNameDrink()
+    public function getCatagory(): string
     {
-        return $this->nameDrink;
+        return $this->catagory;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
-    public function getCataGory()
-    {
-        return $this->cataGory;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getAge()
+    public function getAge(): int
     {
         return $this->age;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
-    public function getPrice()
+    public function getPrice(): int
     {
         return $this->price;
     }
